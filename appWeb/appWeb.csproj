@@ -121,10 +121,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="1.UserInterface\Web\HerramientaController.cs" />
+    <Compile Include="2.Aplicacion\Controllers\HerramientaController.cs" />
     <Compile Include="4.Infraestructura\Data\conexionDAO.cs" />
-    <Compile Include="4.Infraestructura\Repositorio\categoriaDAO.cs" />
-    <Compile Include="4.Infraestructura\Repositorio\herramientaDAO.cs" />
+    <Compile Include="3.Dominio\Repositorio\categoriaDAO.cs" />
+    <Compile Include="3.Dominio\Repositorio\herramientaDAO.cs" />
     <Compile Include="3.Dominio\Entidad\Categoria.cs" />
     <Compile Include="3.Dominio\Entidad\Herramienta.cs" />
     <Compile Include="Global.asax.cs">
@@ -180,21 +180,29 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Herramienta\Index.cshtml" />
-    <Content Include="Views\Herramienta\Agregar.cshtml" />
-    <Content Include="Views\Herramienta\Editar.cshtml" />
+    <Content Include="1.UserInterface\Web\Views\Web.config" />
+    <Content Include="1.UserInterface\Web\Views\_ViewStart.cshtml" />
+    <Content Include="1.UserInterface\Web\Views\Shared\Error.cshtml" />
+    <Content Include="1.UserInterface\Web\Views\Shared\_Layout.cshtml" />
+    <Content Include="1.UserInterface\Web\Views\Herramienta\Index.cshtml" />
+    <Content Include="1.UserInterface\Web\Views\Herramienta\Agregar.cshtml" />
+    <Content Include="1.UserInterface\Web\Views\Herramienta\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="1.UserInterface\" />
     <Folder Include="1.UserInterface\Web\" />
-    <Folder Include="2.Aplicación\" />
+    <Folder Include="1.UserInterface\Web\Views\" />
+    <Folder Include="1.UserInterface\Web\Views\Herramienta\" />
+    <Folder Include="1.UserInterface\Web\Views\Shared\" />
+    <Folder Include="2.Aplicacion\" />
+    <Folder Include="2.Aplicacion\Controllers\" />
     <Folder Include="3.Dominio\" />
     <Folder Include="3.Dominio\Entidad\" />
+    <Folder Include="3.Dominio\Repositorio\" />
     <Folder Include="4.Infraestructura\" />
     <Folder Include="4.Infraestructura\Data\" />
-    <Folder Include="4.Infraestructura\Repositorio\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

@@ -7,7 +7,7 @@ using System.Web;
 using appWeb._3.Dominio.Entidad;
 using appWeb._4.Infraestructura.Data;
 
-namespace appWeb._4.Infraestructura.Repositorio
+namespace appWeb._3.Dominio.Repositorio
 {
     public class herramientaDAO
     {

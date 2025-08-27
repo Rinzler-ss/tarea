@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using appWeb.Entity;
-using appWeb.DAO;
+using appWeb._3.Dominio.Entidad;
+using appWeb._3.Dominio.Repositorio;
+using appWeb._4.Infraestructura.Data;
 
-namespace appWeb.Controllers
+namespace appWeb._2.Aplicacion.Controllers
 {
     public class HerramientaController : Controller
     {
