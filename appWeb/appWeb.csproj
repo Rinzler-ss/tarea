@@ -121,6 +121,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HerramientaController.cs" />
+    <Compile Include="DAO\conexionDAO.cs" />
+    <Compile Include="DAO\categoriaDAO.cs" />
+    <Compile Include="DAO\herramientaDAO.cs" />
+    <Compile Include="Entity\Categoria.cs" />
+    <Compile Include="Entity\Herramienta.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -177,6 +183,9 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Herramienta\Index.cshtml" />
+    <Content Include="Views\Herramienta\Agregar.cshtml" />
+    <Content Include="Views\Herramienta\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
