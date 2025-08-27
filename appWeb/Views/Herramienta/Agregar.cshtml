@@ -1,0 +1,125 @@
+@model appWeb.Entity.Herramienta
+@{
+    ViewBag.Title = "Agregar Herramienta";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-plus"></i> Agregar Nueva Herramienta
+                    </h3>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.Mensaje != null)
+                    {
+                        string alertClass = "alert-info";
+                        string iconClass = "fas fa-info-circle";
+                        
+                        switch (ViewBag.TipoMensaje)
+                        {
+                            case "success":
+                                alertClass = "alert-success";
+                                iconClass = "fas fa-check-circle";
+                                break;
+                            case "error":
+                                alertClass = "alert-danger";
+                                iconClass = "fas fa-exclamation-triangle";
+                                break;
+                            case "warning":
+                                alertClass = "alert-warning";
+                                iconClass = "fas fa-exclamation-circle";
+                                break;
+                        }
+                        
+                        <div class="alert @alertClass">
+                            <i class="@iconClass"></i> @ViewBag.Mensaje
+                        </div>
+                    }
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-triangle"></i> @ViewBag.Error
+                        </div>
+                    }
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    @Html.LabelFor(model => model.idHer, "ID Herramienta", new { @class = "form-label" })
+                                    @Html.TextBoxFor(model => model.idHer, new { @class = "form-control", @placeholder = "Ej: HER006", @maxlength = "7" })
+                                    @Html.ValidationMessageFor(model => model.idHer, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    @Html.LabelFor(model => model.medHer, "Medida", new { @class = "form-label" })
+                                    @Html.TextBoxFor(model => model.medHer, new { @class = "form-control", @placeholder = "Ej: Unidad, Metro, Kilogramo" })
+                                    @Html.ValidationMessageFor(model => model.medHer, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.desHer, "Descripción", new { @class = "form-label" })
+                            @Html.TextBoxFor(model => model.desHer, new { @class = "form-control", @placeholder = "Descripción de la herramienta" })
+                            @Html.ValidationMessageFor(model => model.desHer, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.idcategoria, "Categoría", new { @class = "form-label" })
+                            @Html.DropDownListFor(model => model.idcategoria, 
+                                new SelectList(ViewBag.categorias, "Idcategoria", "Nombrecategoria"), 
+                                "-- Seleccione una categoría --", 
+                                new { @class = "form-select" })
+                            @Html.ValidationMessageFor(model => model.idcategoria, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    @Html.LabelFor(model => model.preUni, "Precio Unitario (S/.)", new { @class = "form-label" })
+                                    @Html.TextBoxFor(model => model.preUni, new { @class = "form-control", @type = "number", @step = "0.01", @min = "0" })
+                                    @Html.ValidationMessageFor(model => model.preUni, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    @Html.LabelFor(model => model.stock, "Stock", new { @class = "form-label" })
+                                    @Html.TextBoxFor(model => model.stock, new { @class = "form-control", @type = "number", @min = "0" })
+                                    @Html.ValidationMessageFor(model => model.stock, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-secondary me-md-2" })
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-save"></i> Guardar Herramienta
+                            </button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function() {
+            // Validación adicional del lado del cliente
+            $('#idHer').on('input', function() {
+                this.value = this.value.toUpperCase();
+            });
+        });
+    </script>
+}
