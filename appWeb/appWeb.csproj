@@ -121,12 +121,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\HerramientaController.cs" />
-    <Compile Include="DAO\conexionDAO.cs" />
-    <Compile Include="DAO\categoriaDAO.cs" />
-    <Compile Include="DAO\herramientaDAO.cs" />
-    <Compile Include="Entity\Categoria.cs" />
-    <Compile Include="Entity\Herramienta.cs" />
+    <Compile Include="1.UserInterface\Web\HerramientaController.cs" />
+    <Compile Include="4.Infraestructura\Data\conexionDAO.cs" />
+    <Compile Include="4.Infraestructura\Repositorio\categoriaDAO.cs" />
+    <Compile Include="4.Infraestructura\Repositorio\herramientaDAO.cs" />
+    <Compile Include="3.Dominio\Entidad\Categoria.cs" />
+    <Compile Include="3.Dominio\Entidad\Herramienta.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,6 +187,14 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="1.UserInterface\" />
+    <Folder Include="1.UserInterface\Web\" />
+    <Folder Include="2.Aplicación\" />
+    <Folder Include="3.Dominio\" />
+    <Folder Include="3.Dominio\Entidad\" />
+    <Folder Include="4.Infraestructura\" />
+    <Folder Include="4.Infraestructura\Data\" />
+    <Folder Include="4.Infraestructura\Repositorio\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

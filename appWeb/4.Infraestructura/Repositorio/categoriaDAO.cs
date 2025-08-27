@@ -4,9 +4,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using appWeb.Entity;
+using appWeb._3.Dominio.Entidad;
+using appWeb._4.Infraestructura.Data;
 
-namespace appWeb.DAO
+namespace appWeb._4.Infraestructura.Repositorio
 {
     public class categoriaDAO
     {

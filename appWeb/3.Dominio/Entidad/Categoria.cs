@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace appWeb.Entity
+namespace appWeb._3.Dominio.Entidad
 {
     public class Categoria
     {

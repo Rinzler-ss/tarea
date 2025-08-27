@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace appWeb.DAO
+namespace appWeb._4.Infraestructura.Data
 {
     public class conexionDAO
     {
@@ -13,7 +13,7 @@ namespace appWeb.DAO
 
         public conexionDAO()
         {
-            cadenaConexion = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
+            cadenaConexion = ConfigurationManager.ConnectionStrings["conexionBD"].ConnectionString;
         }
 
         public SqlConnection ObtenerConexion()
