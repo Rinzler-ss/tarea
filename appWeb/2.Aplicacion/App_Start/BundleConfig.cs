@@ -1,4 +1,4 @@
-﻿using System.Web;
+using System.Web;
 using System.Web.Optimization;
 
 namespace appWeb
@@ -24,7 +24,7 @@ namespace appWeb
 
             bundles.Add(new StyleBundle("~/1.UserInterface/Web/Content/css").Include(
                       "~/1.UserInterface/Web/Content/bootstrap.css",
-                      "~/1.UserInterface/Web/Content/site.css"));
+                      "~/1.UserInterface/Web/Content/Site.css"));
         }
     }
 }
