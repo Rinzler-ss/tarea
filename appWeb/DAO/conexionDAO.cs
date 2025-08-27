@@ -13,7 +13,7 @@ namespace appWeb.DAO
 
         public conexionDAO()
         {
-            cadenaConexion = ConfigurationManager.ConnectionStrings["conexionBD"].ConnectionString;
+            cadenaConexion = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
         }
 
         public SqlConnection ObtenerConexion()
