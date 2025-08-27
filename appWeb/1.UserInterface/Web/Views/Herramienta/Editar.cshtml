@@ -69,16 +69,16 @@
                         </div>
 
                         <div class="mb-3">
-                            @Html.LabelFor(model => model.desHer, "Descripción", new { @class = "form-label" })
-                            @Html.TextBoxFor(model => model.desHer, new { @class = "form-control", @placeholder = "Descripción de la herramienta" })
+                            @Html.LabelFor(model => model.desHer, "Descripcion", new { @class = "form-label" })
+                            @Html.TextBoxFor(model => model.desHer, new { @class = "form-control", @placeholder = "Descripcion de la herramienta" })
                             @Html.ValidationMessageFor(model => model.desHer, "", new { @class = "text-danger" })
                         </div>
 
                         <div class="mb-3">
-                            @Html.LabelFor(model => model.idcategoria, "Categoría", new { @class = "form-label" })
+                            @Html.LabelFor(model => model.idcategoria, "Categoria", new { @class = "form-label" })
                             @Html.DropDownListFor(model => model.idcategoria, 
                                 new SelectList(ViewBag.categorias, "Idcategoria", "Nombrecategoria", Model.idcategoria), 
-                                "-- Seleccione una categoría --", 
+                                "-- Seleccione una categoria --", 
                                 new { @class = "form-select" })
                             @Html.ValidationMessageFor(model => model.idcategoria, "", new { @class = "text-danger" })
                         </div>
